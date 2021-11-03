@@ -3,7 +3,7 @@ from snownlp import sentiment
 import pandas as pd
 from snownlp import SnowNLP
 #
-# emotion = pd.read_csv('C:/Users/小志/Desktop/New folder/emotion2.csv')
+# emotion = pd.read_csv('***/emotion2.csv')
 # emotion['emotion'] = emotion['emotion'].astype(int)
 #
 # for i in range(len(emotion['post_content'])):

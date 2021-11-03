@@ -9,11 +9,11 @@ from sklearn.model_selection import cross_val_score
 import numpy as np
 import pandas as pd
 
-# emotion = pd.read_csv('C:/Users/小志/Desktop/New folder/emotion2.csv')
+# emotion = pd.read_csv('***.csv')
 # emotion['emotion'] = emotion['emotion'].astype(int)
 
-emotion1 = pd.read_csv('C:/Users/小志/Desktop/New folder/emotion2.csv')
-emotion2 = pd.read_csv('C:/Users/小志/Desktop/New folder/emotion3.csv')
+emotion1 = pd.read_csv('***.csv')
+emotion2 = pd.read_csv('***.csv')
 
 negative = pd.concat([emotion1[emotion1['emotion'] == -1], emotion2[emotion2['emotion'] == -1]])
 positive = pd.concat([emotion1[emotion1['emotion'] == 1], emotion2[emotion2['emotion'] == 1]])
@@ -53,7 +53,7 @@ y = emotion.emotion
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=22)
 
 
-### Stopwords for cn --- 哈工大停词表，也可以试试百度的，不过都要自己调整里面的内容
+### Stopwords for cn  
 def load_stopword():
     cn_stop = open('cn_stopwords.txt', encoding='utf-8')
     sw = [line.strip() for line in cn_stop]
@@ -105,8 +105,8 @@ print("Accuracy: ", score)
 ### Save model
 # from sklearn.externals import joblib
 #
-# joblib.dump(model_NB, 'F:/social media/test/model_NB.pkl')
+# joblib.dump(model_NB, '***/model_NB.pkl')
 #
 # ###Load model
-# model_NB = joblib.load('F:/social media/test/model_NB.pkl')
+# model_NB = joblib.load('***/model_NB.pkl')
 

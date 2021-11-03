@@ -5,10 +5,10 @@ import csv
 import numpy as np
 from sqlalchemy import create_engine
 
-con = pymysql.connect(host='39.99.141.81',
-                      user='spider',
-                      password='Spider.774337!',
-                      database='spd_social')
+con = pymysql.connect(host='***',
+                      user='***',
+                      password='***',
+                      database='***')
 
 cursor = con.cursor()
 sql = """SELECT * FROM instagram_backup where post_time LIKE '2021-05-04%'"""
@@ -72,7 +72,7 @@ ins2["post_topic"] = ins2["post_topic"].str.lower()
 
 # # Change charset to utf8mb4
 engine = create_engine(
-    str(r"mysql+mysqldb://%s:" + '%s' + "@%s/%s?charset=utf8mb4") % ('root', 'Ss.768754763', '115.28.187.85',
-                                                                     'bi_db'))
+    str(r"mysql+mysqldb://%s:" + '%s' + "@%s/%s?charset=utf8mb4") % ('root', '***', '***',
+                                                                     '***'))
 ins2.to_sql(name='social_media', con=engine, if_exists='append', index=False)
 ins2.to_sql(name='social_media_backup', con=engine, if_exists='append', index=False)
